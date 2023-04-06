@@ -570,3 +570,24 @@ padding-bottom: 120px;
     color: var(--active-color);
     border-color: var(--active-color);
     }
+
+
+
+
+/* .is-hidden {
+    display: none;
+}
+
+.backdrop{
+    position: fixed;
+        /* margin: auto; *
+        width: 500px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 0px 1000px #000000ae;
+        transform: translate(-50%, -50%);
+        border: 0.5px solid #0000004f;
+} */
