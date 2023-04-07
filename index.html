@@ -31,7 +31,7 @@
           >
           <ul class="menu">
             <li class="menu-item">
-              <a class="menu-link" href="./index.html">Studio</a>
+              <a class="menu-link current" href="./index.html">Studio</a>
             </li>
             <li class="menu-item">
               <a class="menu-link" href="./portfolio.html">Portfolio</a>
@@ -408,7 +408,11 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <p></p>
-        <button type="button" data-modal-close>Close</button>
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
