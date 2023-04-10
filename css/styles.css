@@ -624,11 +624,6 @@ padding-bottom: 120px;
     transition: opacity var(--trans-nav), visibility var(--trans-nav);
 }
 
-.backdrop:hover{
-    opacity:;
-    visibility;
-}
-
 .modal{
     width: 408px;
     min-height: 576px;
@@ -638,7 +633,7 @@ padding-bottom: 120px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition-property: opaciti, visibility, transform ;
+    transition-property: opaciti, visibility, transform;
     padding: 24px;
 }
 
