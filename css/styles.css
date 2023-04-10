@@ -9,6 +9,7 @@
     --hero-text-color:#FFFFFF; 
     --bg-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
     --light-slate-color: #8E8F99;
+    --trans-nav: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  p, h1, h2, h3, h4, h5, h6 {
@@ -46,8 +47,6 @@ body {
 
 .page-header {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
     border-bottom: 1px solid var(--border-solid);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 
@@ -105,6 +104,10 @@ body {
     letter-spacing: 0.02em;
     color:var(--navy-blue-color);
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    transition: color var(--trans-nav);
 }
 
 .menu-link:hover,
@@ -120,6 +123,7 @@ body {
     color:var(--main-text-color);
     font-style: normal;
     text-decoration: none;
+    transition: color var(--trans-nav);
 }
 
 .contact:hover,
@@ -136,9 +140,9 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -68px;
+    bottom: -1px;
     width: 100%;
-    height: 4%;
+    height: 4px;
     border-radius: 2px;
     background-color: var(--active-color);
 }
@@ -190,6 +194,8 @@ color: var(--main-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color var(--trans-nav);
 }
 
 
@@ -197,8 +203,7 @@ color: var(--main-text-color);
 .modal-btn:hover,
 .modal-btn:focus {
     background-color:var(--active-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
+    
 }
 .btn-main {
     font-family: "Roboto", sans-serif;
@@ -211,8 +216,8 @@ color: var(--main-text-color);
     padding: 12px 24px;
     border-radius: 4px;
     border: 1px solid var(--border-solid);
-    transition: background-color 250ms linear, color 250ms linear;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transition: background-color var(--trans-nav); color: var(--trans-nav);
 }
 
 
@@ -220,12 +225,11 @@ color: var(--main-text-color);
 .btn-main:focus {
     color: var(--hero-text-color);
     background: var(--active-color);
-    cursor: pointer;
     border-color: transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*-------------end--HERO--Button--btn-------------*/
-/*---------------------Section2--------------*/
+/*---------------------Section2-------------------*/
 .feature {
     padding-top: 120px;
 }
@@ -235,8 +239,8 @@ color: var(--main-text-color);
 }
 
 .feature-list{
-display: flex;
-gap: 24px;
+    display: flex;
+    gap: 24px;
 }
 
 .feature-hero {
@@ -245,7 +249,6 @@ gap: 24px;
 
 .feature-item{
 flex-basis: calc((100% - 48px) / 4);
-
 }
 
 .feature-dos{
@@ -257,8 +260,7 @@ flex-basis: calc((100% - 48px) / 4);
     margin-bottom: 8px;
 }
 
-/*.feature-icon{
-}*/
+/*.feature-icon{}*/
 .feature-title {
     font-weight: 500;
     font-size: 20px;
@@ -283,7 +285,7 @@ flex-basis: calc((100% - 48px) / 4);
     color: var(--main-text-color);
 }
 
-/*----------------Section3-------------*/
+/*----------------Section3----------------------------*/
 .aside {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -353,10 +355,7 @@ flex-basis: calc((100% - 48px) / 4);
     margin-top: 32px;
     margin-bottom: 8px;
 }
-/*
-.list {}
-.team-social {
-}*/
+/*.list {}.team-social {}*/
 
 .team-soc-list {
     display:flex;
@@ -377,8 +376,7 @@ flex-basis: calc((100% - 48px) / 4);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms linear, color 250ms linear;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--trans-nav);
 }
 
 .team-soc-icon{
@@ -390,9 +388,6 @@ flex-basis: calc((100% - 48px) / 4);
     background-color: var(--active-color);
 }
 
-/*
-.link {}*/
-
  .team-list-img {
     background-color: #FFFFFF;
  }
@@ -400,8 +395,7 @@ flex-basis: calc((100% - 48px) / 4);
     visibility: hidden;
     }
 
-/*.team-item-title, .filtr-item{
-}*/
+/*.team-item-title, .filtr-item{}*/
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -434,8 +428,6 @@ flex-basis: calc((100% - 48px) / 4);
     gap: 48px 24px;
     flex-basis: calc((100% - 48px) / 3);
 }
-
-
 
 .filtr-cnt {
     display: block; 
@@ -486,10 +478,6 @@ flex-basis: calc((100% - 48px) / 4);
     letter-spacing: 0.02em;
 }
 
-.menu-link {
-    padding-top: 48px;
-}
-
 .filtr-projc {
 display: inline-block;
 }
@@ -498,7 +486,6 @@ display: inline-block;
 .filtr-projc:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
 
  /*=====================Підваал======================*/
 
@@ -511,8 +498,7 @@ display: inline-block;
     width: 264px;
 }
 
-/*.container-logo 
-}*/
+/*.container-logo }*/
  .logo-wiht {
     color:var(--background-color);
     color: #f4f4fd;
@@ -563,7 +549,7 @@ display: inline-block;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--trans-nav) ;
 }
 
 .foot-soc-icon {
@@ -614,6 +600,7 @@ padding-bottom: 120px;
     border-radius: 4px;
     padding: 16px 32px;
     color:var(--light-slate-color);
+    transition: color var(--trans-nav);
 }
 
 .cust-icon {
@@ -633,7 +620,12 @@ padding-bottom: 120px;
     height: 100%;
     z-index: 100;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: opacity var(--trans-nav), visibility var(--trans-nav);
+}
+
+.backdrop:hover{
+    opacity:;
+    visibility:;
 }
 
 .modal{
@@ -645,7 +637,7 @@ padding-bottom: 120px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: 250ms linear;
+  !!  transition: ;
     padding: 24px;
 }
 
@@ -653,10 +645,20 @@ padding-bottom: 120px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    fill: var(--main-text-color);
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
-    margin-left: auto;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    transition: background-color var(--trans-nav), color var(--trans-nav);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background: var(--active-color);
+    fill: #FFFFFF;
 }
 
 .backdrop.is-hidden .modal{
