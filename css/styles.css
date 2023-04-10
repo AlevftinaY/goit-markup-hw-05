@@ -217,7 +217,7 @@ color: var(--main-text-color);
     border-radius: 4px;
     border: 1px solid var(--border-solid);
     cursor: pointer;
-    transition: background-color var(--trans-nav); color: var(--trans-nav);
+    transition: background-color var(--trans-nav); color: var(--trans-nav), border-color var(--trans-nav), box-shadow var(--trans-nav) ;
 }
 
 
@@ -480,6 +480,7 @@ flex-basis: calc((100% - 48px) / 4);
 
 .filtr-projc {
 display: inline-block;
+transition: box-shadow var(--trans-nav);
 }
  
 .filtr-projc:hover,
@@ -600,7 +601,7 @@ padding-bottom: 120px;
     border-radius: 4px;
     padding: 16px 32px;
     color:var(--light-slate-color);
-    transition: color var(--trans-nav);
+    transition: color var(--trans-nav), border-color var(--trans-nav);
 }
 
 .cust-icon {
@@ -625,7 +626,7 @@ padding-bottom: 120px;
 
 .backdrop:hover{
     opacity:;
-    visibility:;
+    visibility;
 }
 
 .modal{
@@ -637,7 +638,7 @@ padding-bottom: 120px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-  !!  transition: ;
+    transition-property: opaciti, visibility, transform ;
     padding: 24px;
 }
 
@@ -652,7 +653,7 @@ padding-bottom: 120px;
     position: absolute;
     right: 24px;
     top: 24px;
-    transition: background-color var(--trans-nav), color var(--trans-nav);
+    transition: background-color var(--trans-nav), fill var(--trans-nav);
 }
 
 .modal-close-btn:hover,
